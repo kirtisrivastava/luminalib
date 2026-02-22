@@ -29,3 +29,20 @@ LuminaLib is not just a metadata CRUD app — it ingests actual book files, gene
 
 ## 📂 Project Structure
 
+
+luminalib/
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── db.py
+│   ├── models/
+│   ├── schemas/
+│   ├── routers/
+│   ├── services/
+│   └── utils/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── README.md
+└── ARCHITECTURE.md
+
