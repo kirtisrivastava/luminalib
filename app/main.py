@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from app.routers import auth, books, reviews, intel
+from app.config import settings
+
+print(settings.DATABASE_URL)
 
 app = FastAPI(title="LuminaLib")
 

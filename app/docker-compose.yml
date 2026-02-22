@@ -11,8 +11,8 @@ services:
   db:
     image: postgres:15
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: kirtisrivastava
+      POSTGRES_PASSWORD: 17Feb2025@123
       POSTGRES_DB: luminalib
     ports:
       - "5432:5432"
