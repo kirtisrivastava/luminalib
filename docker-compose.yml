@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: luminalib_api
+    env_file: .env
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - llm
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:15
+    container_name: luminalib_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: luminalib
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  llm:
+    image: ollama/llama3:latest
+    container_name: luminalib_llm
+    ports:
+      - "11434:11434"
+
+volumes:
+  postgres_data:
+
